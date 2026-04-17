@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-slate: #1e3a5f;
+  --color-gold: #b8960c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 bg-white antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: #b8960c;
+  }
+
+  .bg-gold {
+    background-color: #b8960c;
+  }
+
+  .text-slate-immo {
+    color: #1e3a5f;
+  }
+
+  .bg-slate-immo {
+    background-color: #1e3a5f;
+  }
+
+  .border-gold {
+    border-color: #b8960c;
+  }
+
+  .ring-gold {
+    --tw-ring-color: #b8960c;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f40;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a5f80;
+}
+
+/* Selection */
+::selection {
+  background-color: #b8960c30;
+  color: #1e3a5f;
+}
